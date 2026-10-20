@@ -1,0 +1,18 @@
+ProfeFighter - código fuente final (segundo corte)
+=====================================================
+Contenido
+  src/profefighter/...   39 clases en 7 paquetes: app, ui, fachada, juego, decorador, composite, personajes
+  pruebas/ProbarPatrones.java   33 comprobaciones automáticas (sin abrir ventana)
+  ProfeFighter.jar       ejecutable (Java 11 o superior), generado desde este mismo código
+
+Compilar (Linux/macOS; en Windows listar los .java con: dir /s /b src\*.java)
+  javac -encoding UTF-8 -d out $(find src -name "*.java")
+
+Ejecutar el juego
+  java -cp out profefighter.app.Main
+  (o bien)  java -jar ProfeFighter.jar
+
+Ejecutar las pruebas
+  javac -encoding UTF-8 -d out $(find src pruebas -name "*.java")
+  java -Djava.awt.headless=true -cp out ProbarPatrones
+  Última línea esperada: TODAS LAS PRUEBAS PASARON
